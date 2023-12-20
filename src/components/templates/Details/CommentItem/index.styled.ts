@@ -7,22 +7,20 @@ export const CommentItem = styled.div`
     width: 100%;
     margin-bottom: 10px;
     height: 100px; /* Set a fixed height */
-    background-color: ${props => props.theme.iconColor};
-    box-shadow: 3px 10px 3px ${props => props.theme.shadowColor};
+    background-color: ${props => props.theme.commentColor};
 `;
 
 export const CommentText = styled.div`
     display: flex;
     height: 30px;
     color: black;
-    font-family: 'Comic Sans MS';
-    font-size: ${props => props.theme.textSizeTextM};
+    font-size: ${props => props.theme.textSizeTextS};
     align-items: center;
     @media (max-width: 768px) and (min-width: 576px)  {
-        font-size: ${props => props.theme.textSizeTextM700};
+        font-size: ${props => props.theme.textSizeTextS};
     }
     @media (max-width: 576px)  {
-        font-size: ${props => props.theme.textSizeTextM500};
+        font-size: ${props => props.theme.textSizeTextS};
     }
 `;
 
@@ -36,14 +34,13 @@ export const UserName = styled.div`
   display: flex;
   height: 30px;
   color: black;
-  font-family: 'Comic Sans MS';
-  font-size: ${props => props.theme.textSizeTextM};
+  font-size: ${props => props.theme.textSizeTextS};
   align-items: center;
   @media (max-width: 768px) and (min-width: 576px)  {
-        font-size: ${props => props.theme.textSizeTextM700};
+        font-size: ${props => props.theme.textSizeTextS};
     }
     @media (max-width: 576px)  {
-        font-size: ${props => props.theme.textSizeTextM500};
+        font-size: ${props => props.theme.textSizeTextS};
     }
 `;
 

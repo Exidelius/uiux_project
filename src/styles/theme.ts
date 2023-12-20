@@ -6,6 +6,7 @@ export const darkTheme = {
   textColor: "#F0ECE5",
   textGenreColor: "#F0ECE5",
   infoIconColor: "#2D2F34",
+  commentColor: "#F0ECE5",
   iconColor: "#27292D",
   accentColor1: "rgba(192,0,10,0.9)",
   accentColor2: "rgba(192,0,10,0.9)",
@@ -26,10 +27,10 @@ export const darkTheme = {
   textSizeTextM700: "20px",
   textSizeTextM500: "20px",
 
-  textSizeTextS: "12px",
-  textSizeTextS900: "10px",
-  textSizeTextS700: "10px",
-  textSizeTextS500: "10px",
+  textSizeTextS: "20px",
+  textSizeTextS900: "18px",
+  textSizeTextS700: "18px",
+  textSizeTextS500: "18px",
 
   borderRadius: "15px",
 };
@@ -40,6 +41,7 @@ export const lightTheme = {
   textColor: "#101C17",
   textGenreColor: "#F0ECE5",
   infoIconColor: "#FAFAFA",
+  commentColor: "#F0ECE5",
   iconColor: "white",
   accentColor1: "rgba(192,0,10,0.9)",
   accentColor2: "rgba(192,0,10,0.9)",
@@ -60,10 +62,10 @@ export const lightTheme = {
   textSizeTextM700: "20px",
   textSizeTextM500: "20px",
 
-  textSizeTextS: "12px",
-  textSizeTextS900: "10px",
-  textSizeTextS700: "10px",
-  textSizeTextS500: "10px",
+  textSizeTextS: "20px",
+  textSizeTextS900: "18px",
+  textSizeTextS700: "18px",
+  textSizeTextS500: "18px",
 
   borderRadius: "15px",
 };

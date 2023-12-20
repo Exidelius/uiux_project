@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const Details = styled.section`
     display: flex; 
     width: 100%;
@@ -41,6 +42,7 @@ export const Content = styled.div`
         width: 100%;
     }
 `;
+
 export const ContentTitle = styled.span`
     letter-spacing: 1px;
     font-weight: 500;
@@ -109,6 +111,7 @@ export const Image = styled.div`
     height: 100%;
     flex-direction: column;
 `;
+
 export const Img = styled.img`
     aspect-ratio: 1/1/5;
     display: flex;
@@ -149,9 +152,11 @@ export const Button = styled.a`
         opacity: 0.9;
     }
 `;
+
 export const DownloadButton = styled(Button)`
     background-color: ${props=>props.theme.accentColor1};
 `;
+
 export const WatchButton = styled(Button)`
     background-color:${props=>props.theme.accentColor2};
 `;
@@ -181,6 +186,7 @@ export const Year = styled.div`
 
 
 `;
+
 export const DescriptionFull = styled.div`
     display: flex;
     font-size: ${props=> props.theme.textSizeTextM};
@@ -188,6 +194,7 @@ export const DescriptionFull = styled.div`
     letter-spacing: 1px;
 
 `;
+
 export const Genres = styled.div`
     display: grid;
     font-size: ${props=> props.theme.textSizeTextM};
@@ -212,6 +219,7 @@ export const Statistic = styled.div`
         grid-template-columns: 1fr 1fr  ;
     }
 `;
+
 export const TorrentsTitle = styled.div`
     display: flex;
     width: 100%;
@@ -229,3 +237,37 @@ export const Torrents = styled.div`
 
 
 
+export const CommentsTitle = styled.div`
+    display: flex;
+    width: 100%;
+    flex: 0 0 auto;
+    font-weight: 600;
+    font-size: ${props=> props.theme.textSizeTextL};
+    color: ${props=> props.theme.accentColor1};
+`;
+
+export const CommentItem = styled.div`
+    display: flex;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    font-size: ${props=> props.theme.textSizeTextL};
+    color: ${props=> props.theme.accentColor1};
+`;
+
+export const YourNameLabel = styled.div`
+    display: flex;
+    width: 100%;
+    flex: 0 0 auto;
+    font-weight: 600;
+    font-size: ${props=> props.theme.textSizeTextL};
+    color: ${props=> props.theme.accentColor1};
+`;
+
+export const CommentTextLabel = styled.div`
+    display: flex;
+    width: 100%;
+    flex: 0 0 auto;
+    font-weight: 600;
+    font-size: ${props=> props.theme.textSizeTextL};
+    color: ${props=> props.theme.accentColor1};
+`;
