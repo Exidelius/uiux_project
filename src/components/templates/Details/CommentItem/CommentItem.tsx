@@ -1,40 +1,35 @@
-import styled from 'styled-components';
-import 'src/components/templates/Details/form.css';
+import React from 'react';
+import * as Style from './index.styled';
+import { FaTimes } from 'react-icons/fa';
+import {useState, useEffect} from 'react';
 
-export const YourNameLabel = styled.div`
-    display: flex;
-    width: 100%;
-    text-shadow:  2px 3px 1px rgba(0, 0, 0, 0.75);
-    flex: 0 0 auto;
-    font-weight: 600;
-    font-size: ${props=> props.theme.textSizeTextL};
-    color: ${props=> props.theme.accentColor1};
-`;
+export type CommentProps = {
+  id: number;
+  userName: string;
+  commentText: string;
+};
 
-export const CommentTextLabel = styled.div`
-    display: flex;
-    width: 100%;
-    flex: 0 0 auto;
-    text-shadow:  2px 3px 1px rgba(0, 0, 0, 0.75);
-    font-weight: 600;
-    font-size: ${props=> props.theme.textSizeTextL};
-    color: ${props=> props.theme.accentColor1};
-`;
+const CommentItem: React.FC<CommentProps & { comments: CommentProps[]; setComments: React.Dispatch<React.SetStateAction<CommentProps[]>> }> 
+= ({ id, userName, commentText, comments, setComments }) => {
+  const [localComments, setLocalComments] = useState<CommentProps[]>(comments);
 
-export const CommentsTitle = styled.div`
-    display: flex;
-    width: 100%;
-    flex: 0 0 auto;
-    font-weight: 600;
-    text-shadow:  2px 3px 1px rgba(0, 0, 0, 0.75);
-    font-size: ${props=> props.theme.textSizeTextL};
-    color: ${props=> props.theme.accentColor1};
-`;
+  const handleDelete = () => {
+    const updatedComments = localComments.filter(comment => comment.id !== id);
+    setLocalComments(updatedComments);
+    setComments(updatedComments);
+    
+  }
+  return (
+    <Style.CommentItem>
+      <Style.CommentContent>
+        <Style.UserName> {userName} </Style.UserName>
+      </Style.CommentContent>
+      <Style.CommentContent>
+        <Style.CommentText>{commentText}</Style.CommentText>
+        <Style.deleteButton onClick={handleDelete}>x</Style.deleteButton>
+      </Style.CommentContent>
+    </Style.CommentItem>
+  );
+};
 
-export const CommentItem = styled.div`
-    display: flex;
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
-    font-size: ${props=> props.theme.textSizeTextL};
-    color: ${props=> props.theme.accentColor1};
-`;
+export default CommentItem;
