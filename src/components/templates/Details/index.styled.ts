@@ -20,22 +20,22 @@ export const Content = styled.div`
     margin: 0px 0px;
     box-sizing: border-box;
     z-index: 1;
-    @media (min-width: 1200px){
-        width: 1200px;
-    }
-    @media (max-width: 1200px) and (min-width: 992px)  {
-        width: 100%;
-    }
-    @media (max-width: 992px) and (min-width: 768px)  {
-        padding: 0px 20px;   
-        margin: 0px 0px;
-        width: 100%;
-    }
-    @media (max-width: 768px) and (min-width: 576px)  { 
-        padding: 0px 20px;   
-        margin: 0px 0px;
-        width: 100%;
-    }
+    // @media (min-width: 1200px){
+    //     width: 1200px;
+    // }
+    // @media (max-width: 1200px) and (min-width: 992px)  {
+    //     width: 100%;
+    // }
+    // @media (max-width: 992px) and (min-width: 768px)  {
+    //     padding: 0px 20px;   
+    //     margin: 0px 0px;
+    //     width: 100%;
+    // }
+    // @media (max-width: 768px) and (min-width: 576px)  { 
+    //     padding: 0px 20px;   
+    //     margin: 0px 0px;
+    //     width: 100%;
+    // }
     @media (max-width: 576px)  {
         padding: 0px 20px;
         margin: 0px 0px;
@@ -53,9 +53,9 @@ export const ContentTitle = styled.span`
     align-items: center;
     box-sizing: border-box;
     font-size: ${props => props.theme.textSizeTitle};
-    @media (max-width: 768px) and (min-width: 576px)  {
-        font-size: ${props => props.theme.textSizeTitle700};
-    }
+    // @media (max-width: 768px) and (min-width: 576px)  {
+    //     font-size: ${props => props.theme.textSizeTitle700};
+    // }
     @media (max-width: 576px)  {
         font-size: ${props => props.theme.textSizeTitle500};
     }
@@ -83,18 +83,20 @@ export const Data = styled.div`
     border-bottom: 1px solid ${props => props.theme.accentColor1};
     padding: 20px 0px;
     box-sizing: border-box; 
-    @media (min-width: 1200px){   
+    // @media (min-width: 1200px){   
+    // }
+    // @media (max-width: 1200px) and (min-width: 992px)  {     
+    // }
+    // @media (max-width: 992px) and (min-width: 768px)  {     
+    // }
+    @media (max-width: 768px)  {   
+        grid-template-columns: 1fr; 
     }
-    @media (max-width: 1200px) and (min-width: 992px)  {     
-    }
-    @media (max-width: 992px) and (min-width: 768px)  {     
-    }
-    @media (max-width: 768px) and (min-width: 576px)  {    
-    }
-    @media (max-width: 576px)  {
-        grid-template-columns: 1fr;
-    }
+    // @media (max-width: 576px)  {
+    //     grid-template-columns: 1fr;
+    // }
 `;
+
 
 export const BackgroundImage = styled.img`
     position: absolute;
@@ -106,15 +108,18 @@ export const BackgroundImage = styled.img`
 `;
 
 export const Image = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr 50px 50px;
+    grid-gap: 20px;
     width: 100%;
     height: 100%;
-    flex-direction: column;
+    // flex-direction: column;
 `;
 
 export const Img = styled.img`
     aspect-ratio: 1/1/5;
     display: flex;
+    height: 100%;
     width: 100%;
     object-fit: cover;
     box-sizing: border-box;
@@ -127,12 +132,13 @@ export const Buttons = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-    @media (max-width: 768px) and (min-width: 576px)  {
-        grid-template-columns: 1fr  ;
-    }
-    @media (max-width: 576px)  {
-        grid-template-columns: 1fr  ;
-    }
+    grid-template-columns: 1fr  ;
+    // @media (max-width: 768px) and (min-width: 576px)  {
+    //     grid-template-columns: 1fr  ;
+    // }
+    // @media (max-width: 576px)  {
+    //     grid-template-columns: 1fr  ;
+    // }
 
 `;
 
@@ -161,12 +167,27 @@ export const WatchButton = styled(Button)`
     background-color:${props=>props.theme.accentColor2};
 `;
 
+export const DescriptionContent = styled.div`
+    display: grid;
+    width: 100%;
+    // align-items: center;
+    // align-self: center;
+    grid-template-columns: 1fr 100px ;
+    grid-gap: 20px;
+    border-top: 1px solid ${props => props.theme.accentColor1};
+    border-bottom: 1px solid ${props => props.theme.accentColor1};
+    padding: 20px 0px;
+    box-sizing: border-box; 
+`;
+
 export const Description = styled.div`
     display: grid;
     align-items: flex-start;
     align-self: flex-start;
     grid-template-columns: 1fr;
+    background-color: ${props => props.theme.bachgroundColorDown};  
     grid-gap: 20px;
+    width: 100%;
 `;
 
 export const Title = styled.div`
@@ -188,17 +209,18 @@ export const Year = styled.div`
 `;
 
 export const DescriptionFull = styled.div`
-    display: flex;
+]   align-item: start;
     font-size: ${props=> props.theme.textSizeTextM};
     line-height: 25px;
     letter-spacing: 1px;
+    // background-color: ${props => props.theme.bachgroundColor};  
 
 `;
 
 export const Genres = styled.div`
     display: grid;
     font-size: ${props=> props.theme.textSizeTextM};
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5,1frpx);
     grid-gap:10px;
     @media (max-width: 768px) and (min-width: 576px)  {
         grid-template-columns: 1fr  ;
@@ -210,14 +232,16 @@ export const Genres = styled.div`
 
 export const Statistic = styled.div`
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap:20px;
-    @media (max-width: 768px) and (min-width: 576px)  {
-        grid-template-columns: 1fr 1fr  1fr 1fr;
-    }
-    @media (max-width: 576px)  {
-        grid-template-columns: 1fr 1fr  ;
-    }
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    // align-items: start;
+    justify-Content: end;
+    // @media (max-width: 768px) and (min-width: 576px)  {
+    //     grid-template-columns: 1fr 1fr  1fr 1fr;
+    // }
+    // @media (max-width: 576px)  {
+    //     grid-template-columns: 1fr 1fr  ;
+    // }
 `;
 
 export const TorrentsTitle = styled.div`
@@ -225,7 +249,9 @@ export const TorrentsTitle = styled.div`
     width: 100%;
     flex: 0 0 auto;
     font-weight: 600;
-    font-size: ${props=> props.theme.textSizeTextL};
+    justify-content: center;
+    margin: 10px 0;
+    font-size: ${props=> props.theme.textSizeTextM};
     color: ${props=> props.theme.textColor};
 `;
 
@@ -249,7 +275,8 @@ export const CommentsTitle = styled.div`
 export const CommentItem = styled.div`
     display: flex;
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 10px;    
+    width: 100%;
     font-size: ${props=> props.theme.textSizeTextL};
     color: ${props=> props.theme.accentColor1};
 `;
@@ -259,7 +286,7 @@ export const YourNameLabel = styled.div`
     width: 100%;
     flex: 0 0 auto;
     font-weight: 600;
-    font-size: ${props=> props.theme.textSizeTextL};
+    font-size: ${props=> props.theme.textSizeTextM};
     color: ${props=> props.theme.accentColor1};
 `;
 
@@ -268,6 +295,38 @@ export const CommentTextLabel = styled.div`
     width: 100%;
     flex: 0 0 auto;
     font-weight: 600;
-    font-size: ${props=> props.theme.textSizeTextL};
+    font-size: ${props=> props.theme.textSizeTextM};
     color: ${props=> props.theme.accentColor1};
+`;
+
+export const ButtonCustom = styled.button`
+    cursor: pointer;
+    margin: 10px 0 ;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    border-radius:10px;
+    background-color: ${props => props.theme.iconColor};
+    font-size: ${props=>props.theme.textSizeTextM};
+    &:hover{
+        color: ${props=>props.theme.textColor};
+        transition: 0.3s;
+        background-color:  ${props => props.theme.accentColor1};
+    }
+`; 
+
+export const InputUser = styled.input`
+    font-size: ${props=>props.theme.textSizeTextM};
+`
+
+export const TextArea = styled.textarea`
+    width: 100%;
+    resize: none;
+    font-size: ${props=>props.theme.textSizeTextM};
+`;
+
+export const CommentArea = styled.div`
+    width: 100%;
 `;

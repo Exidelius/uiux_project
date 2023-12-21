@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const StatisticItem = styled.div`
-    aspect-ratio: 1/1;
-    width:100%;
+    // aspect-ratio: 1/1;
+    width:100px;
     display: flex;
     flex-direction: column;
     align-items: center;

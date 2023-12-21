@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const GenreItem = styled.div`
     width:100%;
-    height: 30px;
+    height: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;

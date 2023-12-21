@@ -9,7 +9,6 @@ import Torrent from "./TorrentItem";
 import CommentItem from "./CommentItem/CommentItem";
 import {CommentProps} from "./CommentItem/CommentItem";
 import {useState, useEffect} from 'react';
-import Button from 'react-bootstrap/Button';
 
 
 
@@ -83,7 +82,7 @@ const Details = () => {
       const newComment: CommentProps = {
         id: comments.length + 1,
         userName: "User " + userName,
-        commentText: "Wrote: " + commentText
+        commentText: commentText
       };
       setComments([...comments, newComment]);
       setUserName('');
@@ -120,19 +119,19 @@ const Details = () => {
 
 
     return (
-      <div> 
+      <Style.CommentArea> 
         {/* Форма для добавления нового комментария */}
         <form onSubmit={addComment}>
           <Style.YourNameLabel>Your Name:</Style.YourNameLabel>
-          <input className="name_form_control" type="text" value={userName} onChange={handleUserNameChange} />
+          <Style.InputUser type="text" value={userName} onChange={handleUserNameChange} />
           <Style.CommentTextLabel>Your Comment:</Style.CommentTextLabel>
-          <textarea className="comment_form_control" value={commentText} onChange={(e) => handleCommentTextChange(e)}/>
-          <Button className="rounded-square" variant="primary" type="submit">Add comment</Button>
+          <Style.TextArea value={commentText} onChange={(e) => handleCommentTextChange(e)}/>
+          <Style.ButtonCustom type="submit">Add comment</Style.ButtonCustom>
         </form>
 
         {/* Список комментариев */}
         {commentItems}
-      </div>
+      </Style.CommentArea>
     );
   }
 
@@ -171,33 +170,30 @@ const Details = () => {
             </Style.Year>
 
             <Style.Genres>{genresList}</Style.Genres>
+            <Style.DescriptionContent>
+              <Style.DescriptionFull>
+                {filmRetrieve?.data.movie.description_full}
+              </Style.DescriptionFull>
 
-            <Style.DescriptionFull>
-              {filmRetrieve?.data.movie.description_full}
-            </Style.DescriptionFull>
-
-            <Style.Statistic>
-              <StatisticItem
-                icon={<VscStarFull />}
-                text={filmRetrieve?.data.movie.rating}
-              ></StatisticItem>
-              <StatisticItem
-                icon={<AiTwotoneLike />}
-                text={filmRetrieve?.data.movie.like_count}
-              ></StatisticItem>
-              <StatisticItem
-                icon={<BiTimeFive />}
-                text={filmRetrieve?.data.movie.runtime}
-              ></StatisticItem>
-              <StatisticItem
-                icon={<VscDesktopDownload />}
-                text={filmRetrieve?.data.movie.download_count}
-              ></StatisticItem>
-            </Style.Statistic>
-
-            <Style.TorrentsTitle>Downloads:</Style.TorrentsTitle>
-
-            <Style.Torrents>{torrentsList}</Style.Torrents>
+              <Style.Statistic>
+                <StatisticItem
+                  icon={<VscStarFull />}
+                  text={filmRetrieve?.data.movie.rating}
+                ></StatisticItem>
+                <StatisticItem
+                  icon={<AiTwotoneLike />}
+                  text={filmRetrieve?.data.movie.like_count}
+                ></StatisticItem>
+                <StatisticItem
+                  icon={<BiTimeFive />}
+                  text={filmRetrieve?.data.movie.runtime}
+                ></StatisticItem>
+                <StatisticItem
+                  icon={<VscDesktopDownload />}
+                  text={filmRetrieve?.data.movie.download_count}
+                ></StatisticItem>
+              </Style.Statistic>
+            </Style.DescriptionContent>
 
           </Style.Description>
                   
@@ -205,9 +201,11 @@ const Details = () => {
  
 
         </Style.Data>
-        <Style.Data>
-          <Style.CommentItem>{commentsList()}</Style.CommentItem>
-        </Style.Data>
+        <Style.TorrentsTitle>Downloads:</Style.TorrentsTitle>
+        <Style.Torrents>{torrentsList}</Style.Torrents>
+        {/* <Style.Data> */}
+        <Style.CommentItem>{commentsList()}</Style.CommentItem>
+        {/* </Style.Data> */}
       </Style.Content>
     </Style.Details>
   );

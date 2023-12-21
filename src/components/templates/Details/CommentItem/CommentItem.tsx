@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Style from './index.styled';
 import { FaTimes } from 'react-icons/fa';
+import { VscChromeClose } from "react-icons/vsc";
 import {useState, useEffect} from 'react';
 
 export type CommentProps = {
@@ -27,7 +28,7 @@ const CommentItem: React.FC<CommentProps & {
         </Style.CommentContent>
         <Style.CommentContent>
             <Style.CommentText>{commentText}</Style.CommentText>
-            <Style.deleteButton onClick={handleDelete}>x</Style.deleteButton>
+            <Style.deleteButton onClick={handleDelete}><VscChromeClose/></Style.deleteButton>
         </Style.CommentContent>
         </Style.CommentItem>
     );

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const CommentItem = styled.div`
     border-radius: 10px;
     display: block;
@@ -7,13 +8,14 @@ export const CommentItem = styled.div`
     width: 100%;
     margin-bottom: 10px;
     height: 100px; /* Set a fixed height */
-    background-color: ${props => props.theme.commentColor};
+    color: ${props => props.theme.textColor};
+    background-color: ${props => props.theme.iconColor};
 `;
 
 export const CommentText = styled.div`
     display: flex;
     height: 30px;
-    color: black;
+    color: ${props => props.theme.textColor};
     font-size: ${props => props.theme.textSizeTextS};
     align-items: center;
     @media (max-width: 768px) and (min-width: 576px)  {
@@ -31,12 +33,12 @@ export const CommentContent = styled.div`
 `;
 
 export const UserName = styled.div`
-  display: flex;
-  height: 30px;
-  color: black;
-  font-size: ${props => props.theme.textSizeTextS};
-  align-items: center;
-  @media (max-width: 768px) and (min-width: 576px)  {
+    display: flex;
+    height: 30px;
+    color: ${props => props.theme.textColor};
+    font-size: ${props => props.theme.textSizeTextS};
+    align-items: center;
+    @media (max-width: 768px) and (min-width: 576px)  {
         font-size: ${props => props.theme.textSizeTextS};
     }
     @media (max-width: 576px)  {
@@ -45,8 +47,19 @@ export const UserName = styled.div`
 `;
 
 export const deleteButton = styled.button`
-    display: flex;
-    flex: 0 0 auto;
     height: 30px;
+    width: 30px;
     padding: 5px;
+    align-item: center;
+    justify-content: center;
+    color: ${props => props.theme.textColor};
+    background-color: ${props => props.theme.iconColor};
+    border-color: ${props => props.theme.commentColor};
+    hover-color: ${props => props.theme.commentColor};
+    border-radius: 20% 20% 20% 20%;
+    &:hover{
+        cursor: pointer;
+        transition: 0.3s;
+        background-color:  ${props => props.theme.accentColor1};
+    }
 `;

@@ -7,6 +7,7 @@ export const Torrent = styled.a`
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    justify-content: center;
     background-color: ${props => props.theme.iconColor};
     box-shadow: 0px 0px 3px ${props => props.theme.shadowColor};
     transition: 0.3s;
