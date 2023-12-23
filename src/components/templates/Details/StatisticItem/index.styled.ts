@@ -8,6 +8,8 @@ export const StatisticItem = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    // padding: 0 0px;
+    // margin: 10px;
     background-color: ${props => props.theme.iconColor};
     box-shadow: 0px 0px 5px ${props => props.theme.shadowColor};
     border-radius: 10px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Style from './index.styled';
 import { FaTimes } from 'react-icons/fa';
-import { VscChromeClose } from "react-icons/vsc";
+import { FaRegTrashAlt } from "react-icons/fa";
 import {useState, useEffect} from 'react';
 
 export type CommentProps = {
@@ -25,11 +25,11 @@ const CommentItem: React.FC<CommentProps & {
         <Style.CommentItem>
         <Style.CommentContent>
             <Style.UserName>{userName}</Style.UserName>
-        </Style.CommentContent>
-        <Style.CommentContent>
+        {/* </Style.CommentContent>
+        <Style.CommentContent> */}
             <Style.CommentText>{commentText}</Style.CommentText>
-            <Style.deleteButton onClick={handleDelete}><VscChromeClose/></Style.deleteButton>
         </Style.CommentContent>
+        <Style.deleteButton onClick={handleDelete}><FaRegTrashAlt /></Style.deleteButton>
         </Style.CommentItem>
     );
 };

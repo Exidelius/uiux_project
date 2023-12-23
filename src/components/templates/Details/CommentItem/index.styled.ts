@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 export const CommentItem = styled.div`
     border-radius: 20px;
-    display: block;
+    grid-template-columns: 1fr 20px;
+    display: grid;
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 10px;
@@ -29,8 +30,8 @@ export const CommentText = styled.div`
 `;
 
 export const CommentContent = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 20px;
+    // display: grid;
+    // grid-template-columns: 1fr 20px;
     justify-content: space-between;   
     padding: 10px;
 `;
@@ -58,9 +59,9 @@ export const deleteButton = styled.button`
     justify-content: center;
     color: ${props => props.theme.textColor};
     background-color: ${props => props.theme.iconColor};
-    border-color: ${props => props.theme.commentColor};
+    // border-color: ${props => props.theme.commentColor};
     hover-color: ${props => props.theme.commentColor};
-    border-radius: 20% 20% 20% 20%;
+    border-radius: 20px;
     &:hover{
         cursor: pointer;
         transition: 0.3s;

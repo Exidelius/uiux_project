@@ -308,22 +308,29 @@ export const ButtonCustom = styled.button`
     justify-content: center;
     border: 0px;
     border-radius:10px;
+    color: ${props=> props.theme.textColor}; 
     background-color: ${props => props.theme.iconColor};
     font-size: ${props=>props.theme.textSizeTextM};
+    box-shadow: 0px 3px 5px ${props=>props.theme.shadowColor};;
     &:hover{
-        color: ${props=>props.theme.textColor};
         transition: 0.3s;
         background-color:  ${props => props.theme.accentColor1};
     }
 `; 
 
 export const InputUser = styled.input`
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: inset 0px 1px 2px ${props=>props.theme.shadowColor};;
     font-size: ${props=>props.theme.textSizeTextM};
 `
 
 export const TextArea = styled.textarea`
     width: 100%;
     resize: none;
+    box-shadow: inset 0px 1px 2px ${props=>props.theme.shadowColor};;
+    border-radius: 15px;
+    padding: 10px;
     font-size: ${props=>props.theme.textSizeTextM};
 `;
 
