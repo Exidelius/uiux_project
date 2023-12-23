@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const CommentItem = styled.div`
-    border-radius: 20px;
+    border-radius: 20px 10px 10px 20px;
     grid-template-columns: 1fr 20px;
     display: grid;
     flex-wrap: wrap;
@@ -11,7 +11,7 @@ export const CommentItem = styled.div`
     height: 100px; /* Set a fixed height */
     color: ${props => props.theme.textColor};
     background-color: ${props => props.theme.iconColor};
-    padding: 10px;
+    // padding: 10px;
     box-shadow: 0px 0px 5px ${props => props.theme.shadowColor};
 `;
 
@@ -54,14 +54,17 @@ export const UserName = styled.div`
 export const deleteButton = styled.button`
     height: 100%;
     width: 30px;
-    padding: 5px;
+    // padding: 5px;
     align-item: center;
     justify-content: center;
     color: ${props => props.theme.textColor};
     background-color: ${props => props.theme.iconColor};
-    // border-color: ${props => props.theme.commentColor};
+    border-color: none;
     hover-color: ${props => props.theme.commentColor};
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0 ;
+    box-shadow: 4px 0 5px 0 ${props=>props.theme.shadowColor};;
+    outline: none;
+    border:none;
     &:hover{
         cursor: pointer;
         transition: 0.3s;

@@ -113,14 +113,7 @@ export const Buttons = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-    grid-template-columns: 1fr  ;
-    // @media (max-width: 768px) and (min-width: 576px)  {
-    //     grid-template-columns: 1fr  ;
-    // }
-    // @media (max-width: 576px)  {
-    //     grid-template-columns: 1fr  ;
-    // }
-
+    grid-template-columns: 1fr;
 `;
 
 export const Button = styled.a`
@@ -322,6 +315,7 @@ export const InputUser = styled.input`
     border-radius: 15px;
     padding: 10px;
     box-shadow: inset 0px 1px 2px ${props=>props.theme.shadowColor};;
+    background-color:  ${props => props.theme.commentColor};
     font-size: ${props=>props.theme.textSizeTextM};
 `
 
@@ -331,6 +325,7 @@ export const TextArea = styled.textarea`
     box-shadow: inset 0px 1px 2px ${props=>props.theme.shadowColor};;
     border-radius: 15px;
     padding: 10px;
+    background-color:  ${props => props.theme.commentColor};
     font-size: ${props=>props.theme.textSizeTextM};
 `;
 

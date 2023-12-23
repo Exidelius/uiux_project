@@ -25,8 +25,6 @@ const CommentItem: React.FC<CommentProps & {
         <Style.CommentItem>
         <Style.CommentContent>
             <Style.UserName>{userName}</Style.UserName>
-        {/* </Style.CommentContent>
-        <Style.CommentContent> */}
             <Style.CommentText>{commentText}</Style.CommentText>
         </Style.CommentContent>
         <Style.deleteButton onClick={handleDelete}><FaRegTrashAlt /></Style.deleteButton>

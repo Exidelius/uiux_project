@@ -31,3 +31,11 @@ code {
 ::-webkit-scrollbar-thumb:hover{
   background-color: rgb(192,0,10);
 }
+
+input[type="submit"]  
+{
+ border: 0;
+ background: none;
+ box-shadow: none;
+ border-radius: 0px;
+}
