@@ -3,8 +3,9 @@ import styled from 'styled-components';
 export const StatisticItem = styled.div`
     // aspect-ratio: 1/1;
     width:100px;
+    height: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: ${props => props.theme.iconColor};

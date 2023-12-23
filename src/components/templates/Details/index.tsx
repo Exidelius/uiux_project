@@ -81,7 +81,7 @@ const Details = () => {
       event.preventDefault();
       const newComment: CommentProps = {
         id: comments.length + 1,
-        userName: "User " + userName,
+        userName: userName,
         commentText: commentText
       };
       setComments([...comments, newComment]);

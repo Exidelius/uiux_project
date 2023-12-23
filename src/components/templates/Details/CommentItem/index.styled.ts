@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const CommentItem = styled.div`
-    border-radius: 10px;
+    border-radius: 20px;
     display: block;
     flex-wrap: wrap;
     width: 100%;
@@ -10,6 +10,8 @@ export const CommentItem = styled.div`
     height: 100px; /* Set a fixed height */
     color: ${props => props.theme.textColor};
     background-color: ${props => props.theme.iconColor};
+    padding: 10px;
+    box-shadow: 0px 0px 5px ${props => props.theme.shadowColor};
 `;
 
 export const CommentText = styled.div`
@@ -27,7 +29,8 @@ export const CommentText = styled.div`
 `;
 
 export const CommentContent = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 20px;
     justify-content: space-between;   
     padding: 10px;
 `;
@@ -38,6 +41,7 @@ export const UserName = styled.div`
     color: ${props => props.theme.textColor};
     font-size: ${props => props.theme.textSizeTextS};
     align-items: center;
+    border-bottom: 1px solid ${props => props.theme.accentColor1};
     @media (max-width: 768px) and (min-width: 576px)  {
         font-size: ${props => props.theme.textSizeTextS};
     }
@@ -47,7 +51,7 @@ export const UserName = styled.div`
 `;
 
 export const deleteButton = styled.button`
-    height: 30px;
+    height: 100%;
     width: 30px;
     padding: 5px;
     align-item: center;

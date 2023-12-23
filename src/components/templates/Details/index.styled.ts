@@ -15,27 +15,11 @@ export const Details = styled.section`
 export const Content = styled.div`
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    width: 1400px;
     padding: 0px 20px;
     margin: 0px 0px;
     box-sizing: border-box;
     z-index: 1;
-    // @media (min-width: 1200px){
-    //     width: 1200px;
-    // }
-    // @media (max-width: 1200px) and (min-width: 992px)  {
-    //     width: 100%;
-    // }
-    // @media (max-width: 992px) and (min-width: 768px)  {
-    //     padding: 0px 20px;   
-    //     margin: 0px 0px;
-    //     width: 100%;
-    // }
-    // @media (max-width: 768px) and (min-width: 576px)  { 
-    //     padding: 0px 20px;   
-    //     margin: 0px 0px;
-    //     width: 100%;
-    // }
     @media (max-width: 576px)  {
         padding: 0px 20px;
         margin: 0px 0px;
@@ -53,9 +37,6 @@ export const ContentTitle = styled.span`
     align-items: center;
     box-sizing: border-box;
     font-size: ${props => props.theme.textSizeTitle};
-    // @media (max-width: 768px) and (min-width: 576px)  {
-    //     font-size: ${props => props.theme.textSizeTitle700};
-    // }
     @media (max-width: 576px)  {
         font-size: ${props => props.theme.textSizeTitle500};
     }
@@ -89,7 +70,7 @@ export const Data = styled.div`
     // }
     // @media (max-width: 992px) and (min-width: 768px)  {     
     // }
-    @media (max-width: 768px)  {   
+    @media (max-width: 992px)  {   
         grid-template-columns: 1fr; 
     }
     // @media (max-width: 576px)  {
@@ -119,7 +100,7 @@ export const Image = styled.div`
 export const Img = styled.img`
     aspect-ratio: 1/1/5;
     display: flex;
-    height: 100%;
+    // height: 100%;
     width: 100%;
     object-fit: cover;
     box-sizing: border-box;
@@ -170,14 +151,23 @@ export const WatchButton = styled(Button)`
 export const DescriptionContent = styled.div`
     display: grid;
     width: 100%;
-    // align-items: center;
-    // align-self: center;
     grid-template-columns: 1fr 100px ;
     grid-gap: 20px;
     border-top: 1px solid ${props => props.theme.accentColor1};
     border-bottom: 1px solid ${props => props.theme.accentColor1};
     padding: 20px 0px;
     box-sizing: border-box; 
+    @media (min-width: 768px)  {
+        grid-template-columns: 1fr 100px ;
+    }
+    @media (max-width: 768px)  {
+        align-items: center;
+        justify-content: top;
+        display: flex;
+        // grid-template-rows: 100px 1fr;
+        flex: 100px 100%;
+        flex-direction: column-reverse;
+    }
 `;
 
 export const Description = styled.div`
@@ -188,6 +178,7 @@ export const Description = styled.div`
     background-color: ${props => props.theme.bachgroundColorDown};  
     grid-gap: 20px;
     width: 100%;
+
 `;
 
 export const Title = styled.div`
@@ -213,6 +204,11 @@ export const DescriptionFull = styled.div`
     font-size: ${props=> props.theme.textSizeTextM};
     line-height: 25px;
     letter-spacing: 1px;
+    line-height: 30px;
+    overflow-y:auto;
+    max-height: 440px;
+    text-align: justify;
+    padding: 5px;
     // background-color: ${props => props.theme.bachgroundColor};  
 
 `;
@@ -236,12 +232,14 @@ export const Statistic = styled.div`
     grid-gap: 20px;
     // align-items: start;
     justify-Content: end;
-    // @media (max-width: 768px) and (min-width: 576px)  {
-    //     grid-template-columns: 1fr 1fr  1fr 1fr;
-    // }
-    // @media (max-width: 576px)  {
-    //     grid-template-columns: 1fr 1fr  ;
-    // }
+    @media (max-width: 768px) and (min-width: 576px)  {
+        grid-template-columns: 1fr 1fr  1fr 1fr;
+        height:50px;
+    }
+    @media (max-width: 576px)  {
+        grid-template-columns: 1fr 1fr  ;
+        height:100px;
+    }
 `;
 
 export const TorrentsTitle = styled.div`
@@ -259,6 +257,8 @@ export const Torrents = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
+    border-bottom: 1px solid ${props=> props.theme.accentColor1};
+    padding: 20px;
 `;
 
 
@@ -287,7 +287,7 @@ export const YourNameLabel = styled.div`
     flex: 0 0 auto;
     font-weight: 600;
     font-size: ${props=> props.theme.textSizeTextM};
-    color: ${props=> props.theme.accentColor1};
+    color: ${props=> props.theme.textColor};
 `;
 
 export const CommentTextLabel = styled.div`
@@ -296,7 +296,7 @@ export const CommentTextLabel = styled.div`
     flex: 0 0 auto;
     font-weight: 600;
     font-size: ${props=> props.theme.textSizeTextM};
-    color: ${props=> props.theme.accentColor1};
+    color: ${props=> props.theme.textColor};
 `;
 
 export const ButtonCustom = styled.button`

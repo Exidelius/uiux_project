@@ -56,6 +56,9 @@ export const Film = styled.div`
 export const Content = styled.div`
     display: flex;
     padding: 1px;
+    @media (max-width: 769px) {
+        flex-direction: column;
+    }
 `;
 
 export const Card = styled.img` 
@@ -65,6 +68,9 @@ export const Card = styled.img`
     box-sizing: border-box;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    @media (max-width: 769px) {
+        max-height:300px;
+    }
 `;
 
 export const Name = styled.div`
