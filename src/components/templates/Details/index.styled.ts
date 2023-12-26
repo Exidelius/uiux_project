@@ -314,18 +314,20 @@ export const ButtonCustom = styled.button`
 export const InputUser = styled.input`
     border-radius: 15px;
     padding: 10px;
-    box-shadow: inset 0px 1px 2px ${props=>props.theme.shadowColor};;
-    background-color:  ${props => props.theme.commentColor};
+    // box-shadow: inset 0px 1px 2px ${props=>props.theme.shadowColor};;
+    color:  ${props => props.theme.textColor};
+    background-color:  ${props => props.theme.backgroundColor};
     font-size: ${props=>props.theme.textSizeTextM};
 `
 
 export const TextArea = styled.textarea`
     width: 100%;
     resize: none;
-    box-shadow: inset 0px 1px 2px ${props=>props.theme.shadowColor};;
+    // box-shadow: inset 0px 1px 2px ${props=>props.theme.shadowColor};;
     border-radius: 15px;
     padding: 10px;
-    background-color:  ${props => props.theme.commentColor};
+    color:  ${props => props.theme.textColor};
+    background-color:  ${props => props.theme.backgroundColor};
     font-size: ${props=>props.theme.textSizeTextM};
 `;
 
